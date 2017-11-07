@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:View xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		xmlns:s="library://ns.adobe.com/flex/spark" title="comfortvilleAccountView" xmlns:people="services.people.*" xmlns:tools="tools.*">
+	
+	
+	<fx:Script>
+		<![CDATA[
+			import mx.rpc.events.FaultEvent;
+			import mx.rpc.events.ResultEvent;
+
+			
+			import services.people.People;
+			
+			import tools.Settings;
+			private var people:People = Settings.people;
+
+			protected function getButton_clickHandler(event:MouseEvent):void
+			{
+				people.updateCredentials();
+				peopleResponder.token = people.getAll();
+				
+			}
+			
+			protected function peopleResponder_resultHandler(event:ResultEvent):void
+			{
+				trace(event.result);			
+			}
+			
+			protected function peopleResponder_faultHandler(event:FaultEvent):void
+			{
+				trace(event.fault.faultDetail);
+			}
+			
+		]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<s:CallResponder id="peopleResponder" result="peopleResponder_resultHandler(event)" 
+						 fault="peopleResponder_faultHandler(event)" />
+	</fx:Declarations>
+	<s:Button id="getButton" click="getButton_clickHandler(event)"/>
+	<s:viewMenuItems>
+		
+		<s:ViewMenuItem icon="C:/Program Files/Adobe/Adobe Flash Builder 4.7/assets/search-64.png" label="Поиск"/> 
+		<s:ViewMenuItem icon="C:/Program Files/Adobe/Adobe Flash Builder 4.7/assets/rating-64.png" label="Рейтинг"/> 
+		<s:ViewMenuItem icon="C:/Program Files/Adobe/Adobe Flash Builder 4.7/assets/news-64.png" label="Новости"/> 
+		<s:ViewMenuItem icon="C:/Program Files/Adobe/Adobe Flash Builder 4.7/assets/user-64.png" label="Аккаунт"/>
+	</s:viewMenuItems> 
+</s:View>

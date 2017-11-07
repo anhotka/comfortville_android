@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:View xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		xmlns:s="library://ns.adobe.com/flex/spark" title="comfortvilleLoginView">
+
+	
+	<s:navigationContent/>
+	
+		<s:layout>
+			<s:VerticalLayout/>
+			
+		</s:layout>	
+		
+	<fx:Script>
+		<![CDATA[
+			import mx.rpc.events.FaultEvent;
+			import mx.rpc.events.ResultEvent;
+			
+			import model.Credentials;
+			
+			import services.authenticate.Authenticate;
+			
+			import tools.Settings;
+			
+			private var authenticate:Authenticate=Settings.authenticate;
+			
+			private function getCredentials(): Credentials {
+				return new Credentials(loginInput.text, passwordInput.text, rememberCheck.selected);
+			}
+			
+			protected function loginButton_clickHandler(event:MouseEvent):void
+			{
+				// Вставить навигатор, закомментить логин респондер токен
+				// loginResponder.token = authenticate.authenticate(getCredentials().toJson());
+				navigator.pushView(comfortvilleAccountView);
+			}
+			
+			protected function loginResponder_resultHandler(event:ResultEvent):void
+			{
+				var res:Object = {};
+				if (event.result!=null)
+					res = JSON.parse(event.result as String);
+				if (res.hasOwnProperty("id_token")) {
+					Settings.token = res.id_token;
+					navigator.pushView(comfortvilleAccountView);
+				}
+				else
+					Settings.token = "";
+				
+			}
+			
+			protected function loginResponder_faultHandler(event:FaultEvent):void
+			{
+				trace(event.fault.faultString+event.fault.faultDetail);	
+				Settings.token = "";
+			}
+			
+		]]>
+	</fx:Script>
+		
+		
+
+	<fx:Declarations>
+		<s:CallResponder id="loginResponder" result="loginResponder_resultHandler(event)" 
+						 fault="loginResponder_faultHandler(event)" />
+	</fx:Declarations>
+
+
+	
+	<s:Group width="100%">
+		<s:Label text="Войдите" top="40" width="90%" fontStyle="normal" color="#006699" fontSize="42" fontWeight="normal" fontFamily="Segoe UI, sans-serif"> 
+		</s:Label> 
+	</s:Group>
+	<s:Group width="100%">
+		<s:TextInput horizontalCenter="0" top="20"   alpha="0.3" width="90%" fontStyle="normal"  fontSize="42" fontWeight="normal" fontFamily="Segoe UI, sans-serif" id="loginInput"/>
+	</s:Group>
+	<s:Group width="100%">
+		<s:TextInput horizontalCenter="0" top="10"  alpha="0.3" width="90%" fontStyle="normal"  fontSize="42" fontWeight="normal" fontFamily="Segoe UI, sans-serif" id="passwordInput"/>
+	</s:Group> 
+	
+	<s:HGroup width="100%" verticalAlign="middle" horizontalAlign="center"><s:CheckBox   id="rememberCheck"/>
+		<s:Label verticalAlign="middle" text="Запомнить меня" top="40" width="90%" fontStyle="normal" color="#006699" fontSize="42" fontWeight="normal" fontFamily="Segoe UI, sans-serif">
+		</s:Label>
+		</s:HGroup>
+	
+	<s:Group width="100%">
+		<s:Button horizontalCenter="0" chromeColor="#006699" label="Войти" color="white" fontStyle="normal"  fontSize="42" fontWeight="bold" fontFamily="Segoe UI"  id="loginButton" click="loginButton_clickHandler(event)"/>
+	</s:Group>
+	<s:Group width="100%">
+		<s:Label horizontalCenter="0" text="Или зарегистрируйтесь" textDecoration="underline" top="40" width="70%" fontStyle="normal" color="#006699" fontSize="36" fontWeight="normal" fontFamily="Segoe UI, sans-serif"> 
+		</s:Label> 
+	</s:Group>
+	
+	<!-- The menu I hate-->	
+	
+
+	
+
+	<s:viewMenuItems>
+		
+		<s:ViewMenuItem icon="C:/Program Files/Adobe/Adobe Flash Builder 4.7/assets/search-64.png" label="Поиск"/> 
+		<s:ViewMenuItem icon="C:/Program Files/Adobe/Adobe Flash Builder 4.7/assets/rating-64.png" label="Рейтинг"/> 
+		<s:ViewMenuItem icon="C:/Program Files/Adobe/Adobe Flash Builder 4.7/assets/news-64.png" label="Новости"/> 
+		<s:ViewMenuItem icon="C:/Program Files/Adobe/Adobe Flash Builder 4.7/assets/user-64.png" label="Аккаунт"/>
+	</s:viewMenuItems> 
+	
+	
+		
+</s:View>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+	
+
+<s:ViewNavigatorApplication xmlns:fx="http://ns.adobe.com/mxml/2009" 
+							xmlns:s="library://ns.adobe.com/flex/spark" firstView="views.comfortvilleLoginView" applicationDPI="320">
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+
+	<fx:Script>
+		<![CDATA[
+			import mx.core.FlexGlobals;
+			
+			protected function button1_clickHandler(event:MouseEvent):void {
+				navigator.popView();
+			}
+			protected function button2_clickHandler(event:MouseEvent):void {
+				mx.core.FlexGlobals.topLevelApplication.viewMenuOpen=true;
+			}
+				
+		]]>
+		
+		
+	</fx:Script>
+		<s:navigationContent>
+			<s:Button icon="C:/Program Files/Adobe/Adobe Flash Builder 4.7/assets/icon-arrow-left-64px.png" horizontalCenter="left" click="button1_clickHandler(event);"/>
+		</s:navigationContent>
+	
+		<s:titleContent>
+		<s:Image width="100%" source="C:/Program Files/Adobe/Adobe Flash Builder 4.7/assets/logo1.png" />
+			</s:titleContent>
+		
+		<s:actionContent>
+			<s:Button icon="C:/Program Files/Adobe/Adobe Flash Builder 4.7/assets/menu-circles-64px.png" horizontalCenter="right" click="button2_clickHandler(event);"/>
+		</s:actionContent>  
+	
+	
+	
+	<fx:Style>
+		@namespace s "library://ns.adobe.com/flex/spark";
+		s|ActionBar
+		{
+			chromeColor: #ffffff;
+			titleAlign: center;
+		}
+
+			
+		s|ViewMenu { 
+		
+			skinClass: ClassReference("skins.CustomViewMenuSkin");
+		}
+		
+		
+	
+		
+	</fx:Style>
+	
+</s:ViewNavigatorApplication>
+
+
+
+
+
+
+	
+

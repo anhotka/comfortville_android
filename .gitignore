@@ -1,0 +1,9 @@
+
+# Created by https://www.gitignore.io/api/flexbuilder
+
+### FlexBuilder ###
+bin/
+bin-debug/
+bin-release/
+
+# End of https://www.gitignore.io/api/flexbuilder
