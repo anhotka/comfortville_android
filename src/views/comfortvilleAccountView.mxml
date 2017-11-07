@@ -39,11 +39,15 @@
 						 fault="peopleResponder_faultHandler(event)" />
 	</fx:Declarations>
 	<s:Button id="getButton" click="getButton_clickHandler(event)"/>
+	
+	
+	
 	<s:viewMenuItems>
 		
-		<s:ViewMenuItem icon="C:/Program Files/Adobe/Adobe Flash Builder 4.7/assets/search-64.png" label="Поиск"/> 
-		<s:ViewMenuItem icon="C:/Program Files/Adobe/Adobe Flash Builder 4.7/assets/rating-64.png" label="Рейтинг"/> 
-		<s:ViewMenuItem icon="C:/Program Files/Adobe/Adobe Flash Builder 4.7/assets/news-64.png" label="Новости"/> 
-		<s:ViewMenuItem icon="C:/Program Files/Adobe/Adobe Flash Builder 4.7/assets/user-64.png" label="Аккаунт"/>
+		<s:ViewMenuItem color="#663366"  icon="C:/Program Files/Adobe/Adobe Flash Builder 4.7/assets/search-64.png" label="Поиск"/> 
+		<s:ViewMenuItem color="#663366"  icon="C:/Program Files/Adobe/Adobe Flash Builder 4.7/assets/rating-64.png" label="Рейтинг"/> 
+		<s:ViewMenuItem color="#663366"  icon="C:/Program Files/Adobe/Adobe Flash Builder 4.7/assets/news-64.png" label="Новости"/> 
+		<s:ViewMenuItem color="#663366"  icon="C:/Program Files/Adobe/Adobe Flash Builder 4.7/assets/user-64.png" label="Аккаунт"/>
 	</s:viewMenuItems> 
+	
 </s:View>

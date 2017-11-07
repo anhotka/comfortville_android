@@ -28,7 +28,7 @@
 		</s:navigationContent>
 	
 		<s:titleContent>
-		<s:Image width="100%" source="C:/Program Files/Adobe/Adobe Flash Builder 4.7/assets/logo1.png" />
+		<s:Image width="100%" source="C:/Program Files/Adobe/Adobe Flash Builder 4.7/assets/logo1-3.png" />
 			</s:titleContent>
 		
 		<s:actionContent>
@@ -45,6 +45,13 @@
 			titleAlign: center;
 		}
 
+		s|TextInput { 
+			skinClass: ClassReference("skins.SquareTextInput"); 
+		}
+		s|Button { 
+			skinClass: ClassReference("skins.OrangeButton");
+	
+		}
 			
 		s|ViewMenu { 
 		

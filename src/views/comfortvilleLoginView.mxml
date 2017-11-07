@@ -54,6 +54,7 @@
 				Settings.token = "";
 			}
 			
+			
 		]]>
 	</fx:Script>
 		
@@ -67,27 +68,30 @@
 
 	
 	<s:Group width="100%">
-		<s:Label text="Войдите" top="40" width="90%" fontStyle="normal" color="#006699" fontSize="42" fontWeight="normal" fontFamily="Segoe UI, sans-serif"> 
+		<s:Label horizontalCenter="0" text="Войдите" top="40" width="90%" fontStyle="normal" color="#663366" fontSize="42" fontWeight="bold" fontFamily="PT Sans, sans-serif"> 
 		</s:Label> 
 	</s:Group>
-	<s:Group width="100%">
-		<s:TextInput horizontalCenter="0" top="20"   alpha="0.3" width="90%" fontStyle="normal"  fontSize="42" fontWeight="normal" fontFamily="Segoe UI, sans-serif" id="loginInput"/>
+	<s:Group width="100%" >
+		<s:TextInput  top="40" horizontalCenter="0" width="90%" height="200%"  fontSize="42"  id="loginInput"/>
 	</s:Group>
-	<s:Group width="100%">
-		<s:TextInput horizontalCenter="0" top="10"  alpha="0.3" width="90%" fontStyle="normal"  fontSize="42" fontWeight="normal" fontFamily="Segoe UI, sans-serif" id="passwordInput"/>
+	<s:Group width="100%" >
+		<s:TextInput top="20" bottom="20" horizontalCenter="0" width="90%" fontSize="42"  id="passwordInput"/>
 	</s:Group> 
 	
-	<s:HGroup width="100%" verticalAlign="middle" horizontalAlign="center"><s:CheckBox   id="rememberCheck"/>
-		<s:Label verticalAlign="middle" text="Запомнить меня" top="40" width="90%" fontStyle="normal" color="#006699" fontSize="42" fontWeight="normal" fontFamily="Segoe UI, sans-serif">
-		</s:Label>
+	<s:Group width="100%" >
+		<s:HGroup width="90%" verticalAlign="bottom" horizontalAlign="center" horizontalCenter="0" >
+		<s:CheckBox scaleX="0.7" scaleY="0.7" id="rememberCheck" verticalCenter="0"/>
+		<s:Label verticalAlign="bottom" text="Запомнить меня" top="40"  fontStyle="normal" color="#663366" fontSize="36" fontWeight="bold" fontFamily="PT Sans, sans-serif"/>
 		</s:HGroup>
+	</s:Group>
 	
 	<s:Group width="100%">
-		<s:Button horizontalCenter="0" chromeColor="#006699" label="Войти" color="white" fontStyle="normal"  fontSize="42" fontWeight="bold" fontFamily="Segoe UI"  id="loginButton" click="loginButton_clickHandler(event)"/>
+		<s:Button label="Войти" horizontalCenter="0" top="40"  id="loginButton" click="loginButton_clickHandler(event)"/>
+			<!--	   chromeColor="#ff9966" color="white" fontStyle="normal" fontSize="42" fontWeight="bold" fontFamily="PT Sans, sans-serif" -->
+				
 	</s:Group>
 	<s:Group width="100%">
-		<s:Label horizontalCenter="0" text="Или зарегистрируйтесь" textDecoration="underline" top="40" width="70%" fontStyle="normal" color="#006699" fontSize="36" fontWeight="normal" fontFamily="Segoe UI, sans-serif"> 
-		</s:Label> 
+		<s:Label horizontalCenter="0" text="Или зарегистрируйтесь" textDecoration="underline" top="20" fontStyle="normal" fontWeight="bold" color="#663366" fontSize="36" fontFamily="PT Sans, sans-serif" />
 	</s:Group>
 	
 	<!-- The menu I hate-->	
@@ -97,10 +101,10 @@
 
 	<s:viewMenuItems>
 		
-		<s:ViewMenuItem icon="C:/Program Files/Adobe/Adobe Flash Builder 4.7/assets/search-64.png" label="Поиск"/> 
-		<s:ViewMenuItem icon="C:/Program Files/Adobe/Adobe Flash Builder 4.7/assets/rating-64.png" label="Рейтинг"/> 
-		<s:ViewMenuItem icon="C:/Program Files/Adobe/Adobe Flash Builder 4.7/assets/news-64.png" label="Новости"/> 
-		<s:ViewMenuItem icon="C:/Program Files/Adobe/Adobe Flash Builder 4.7/assets/user-64.png" label="Аккаунт"/>
+		<s:ViewMenuItem color="#663366"  icon="C:/Program Files/Adobe/Adobe Flash Builder 4.7/assets/search-64.png" label="Поиск"/> 
+		<s:ViewMenuItem color="#663366"  icon="C:/Program Files/Adobe/Adobe Flash Builder 4.7/assets/rating-64.png" label="Рейтинг"/> 
+		<s:ViewMenuItem color="#663366"  icon="C:/Program Files/Adobe/Adobe Flash Builder 4.7/assets/news-64.png" label="Новости"/> 
+		<s:ViewMenuItem color="#663366"  icon="C:/Program Files/Adobe/Adobe Flash Builder 4.7/assets/user-64.png" label="Аккаунт"/>
 	</s:viewMenuItems> 
 	
 	

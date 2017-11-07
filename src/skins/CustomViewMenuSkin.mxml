@@ -84,7 +84,7 @@ in accordance with the terms of the license agreement accompanying it.
         <!-- Divider line -->
         <s:Rect left="0" right="0" top="0" height="0">
             <s:stroke>
-                <s:SolidColorStroke id="dividerStroke" weight="1" color="#006699" alpha="1"/>   
+                <s:SolidColorStroke id="dividerStroke" weight="1" color="#663366" alpha="1"/>   
             </s:stroke>
         </s:Rect> 
         
