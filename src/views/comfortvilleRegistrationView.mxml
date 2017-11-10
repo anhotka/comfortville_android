@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:View xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		xmlns:s="library://ns.adobe.com/flex/spark" title="comfortvilleRegistrationView">
+	<s:layout>
+		<s:VerticalLayout/>
+	</s:layout>
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	
+	
+	<s:Group width="100%">
+		<s:Label horizontalCenter="0" text="Регистрация" top="40" width="90%" fontStyle="normal" color="#663366" fontSize="42" fontWeight="bold" fontFamily="PT Sans, sans-serif"> 
+		</s:Label> 
+	</s:Group>
+	<s:Group width="100%" >
+		<s:TextInput  top="20" horizontalCenter="0" width="90%" height="200%"  fontSize="42"  />
+	</s:Group>
+	<s:Group width="100%" >
+		<s:TextInput top="20" bottom="20" horizontalCenter="0" width="90%" fontSize="42"  />
+	</s:Group> 
+	<s:Group width="100%" >
+		<s:TextInput bottom="20" horizontalCenter="0" width="90%" fontSize="42"  />
+	</s:Group> 
+	
+	
+	<s:Group width="100%"  >
+		<s:HGroup width="100%" verticalAlign="middle" horizontalAlign="left" left="35"  bottom="20">
+			<s:Image source="/assets/cat-64.png"/>
+			<s:Label  text="Выберите аватар пользователя"  fontStyle="normal" color="#663366"  fontWeight="bold" fontFamily="PT Sans, sans-serif"/>
+		</s:HGroup>
+	</s:Group>
+	
+	
+	<s:Group width="100%" >
+		<s:HGroup width="100%" verticalAlign="top" horizontalAlign="left" left="35" >
+			<s:CheckBox scaleX="0.7" scaleY="0.7" />
+			<s:Label width="100%" verticalAlign="bottom"  text="ОВЗ (у себя или близкого человека)"   fontStyle="normal" color="#663366"  fontWeight="bold" fontFamily="PT Sans, sans-serif"/>
+		</s:HGroup>
+	</s:Group>
+	
+	<s:Group width="100%" >
+		<s:HGroup width="100%" verticalAlign="top" horizontalAlign="left" left="35" top="10">
+			<s:CheckBox scaleX="0.7" scaleY="0.7" />
+			<s:Label width="100%" verticalAlign="bottom"  text="Даю согласие на обработку моих персональных данных"   fontStyle="normal" color="#663366"  fontWeight="bold" fontFamily="PT Sans, sans-serif"/>
+		</s:HGroup>
+	</s:Group>
+	
+	<s:Group width="100%" >
+		<s:HGroup width="100%" verticalAlign="top" horizontalAlign="left" left="35" top="10">
+			<s:CheckBox scaleX="0.7" scaleY="0.7"  verticalCenter="0"/>
+			<s:Label width="100%" verticalAlign="bottom" text="Ознакомился и согласен с правилами пользователя"   fontStyle="normal" color="#663366"  fontWeight="bold" fontFamily="PT Sans, sans-serif"/>
+		</s:HGroup>
+	</s:Group>
+	
+	<s:Group width="100%">
+		<s:Button label="Зарегистрироваться" horizontalCenter="0" top="40" />
+		<!--	   chromeColor="#ff9966" color="white" fontStyle="normal" fontSize="42" fontWeight="bold" fontFamily="PT Sans, sans-serif" -->
+		
+	</s:Group>
+	
+	
+
+	
+	
+	<s:viewMenuItems>
+		
+		<s:ViewMenuItem color="#663366"  icon="/assets/search-64.png" label="Поиск"/> 
+		<s:ViewMenuItem color="#663366"  icon="/assets/rating-64.png" label="Рейтинг"/> 
+		<s:ViewMenuItem color="#663366"  icon="/assets/news-64.png" label="Новости"/> 
+		<s:ViewMenuItem color="#663366"  icon="/assets/user-64.png" label="Аккаунт"/>
+	</s:viewMenuItems> 
+	
+	
+	
+	
+</s:View>
