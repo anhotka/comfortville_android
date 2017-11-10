@@ -21,17 +21,38 @@
 			
 			import tools.Settings;
 			
+	//		import flash.display.*;
+		
+			import flash.events.*;
+			
 			private var authenticate:Authenticate=Settings.authenticate;
 			
 			private function getCredentials(): Credentials {
 				return new Credentials(loginInput.text, passwordInput.text, rememberCheck.selected);
 			}
 			
+	/*		private function loginInput_change(event:TextEvent)
+			{
+					var message='Имя пользователя...'
+				if (event.text == '') {
+					event.target.display = display.noPrint
+					event.text = message
+					} else {
+						event.target.display = display.visible
+					}
+			} */
+			
+			
 			protected function loginButton_clickHandler(event:MouseEvent):void
 			{
 				// Вставить навигатор, закомментить логин респондер токен
 				// loginResponder.token = authenticate.authenticate(getCredentials().toJson());
 				navigator.pushView(comfortvilleAccountView);
+			}
+			
+			protected function registrationButton_clickHandler (event:MouseEvent):void
+			{
+				navigator.pushView(comfortvilleRegistrationView);
 			}
 			
 			protected function loginResponder_resultHandler(event:ResultEvent):void
@@ -72,7 +93,10 @@
 		</s:Label> 
 	</s:Group>
 	<s:Group width="100%" >
-		<s:TextInput  top="40" horizontalCenter="0" width="90%" height="200%"  fontSize="42"  id="loginInput"/>
+		<s:TextInput  top="20" horizontalCenter="0" width="90%" height="200%"  fontSize="42"  id="loginInput" />
+		
+	<!--	<s:TextInput  top="20" horizontalCenter="0" width="90%" height="200%"  fontSize="42"  id="loginInput" change="loginInput_change"/> -->
+	
 	</s:Group>
 	<s:Group width="100%" >
 		<s:TextInput top="20" bottom="20" horizontalCenter="0" width="90%" fontSize="42"  id="passwordInput"/>
@@ -87,11 +111,12 @@
 	
 	<s:Group width="100%">
 		<s:Button label="Войти" horizontalCenter="0" top="40"  id="loginButton" click="loginButton_clickHandler(event)"/>
-			<!--	   chromeColor="#ff9966" color="white" fontStyle="normal" fontSize="42" fontWeight="bold" fontFamily="PT Sans, sans-serif" -->
+			
+		<!--	   chromeColor="#ff9966" color="white" fontStyle="normal" fontSize="42" fontWeight="bold" fontFamily="PT Sans, sans-serif" -->
 				
 	</s:Group>
 	<s:Group width="100%">
-		<s:Label horizontalCenter="0" text="Или зарегистрируйтесь" textDecoration="underline" top="20" fontStyle="normal" fontWeight="bold" color="#663366" fontSize="36" fontFamily="PT Sans, sans-serif" />
+		<s:Label id="registrationButton" click="registrationButton_clickHandler(event)" horizontalCenter="0" text="Или зарегистрируйтесь" textDecoration="underline" top="20" fontStyle="normal" fontWeight="bold" color="#663366" fontSize="36" fontFamily="PT Sans, sans-serif" />
 	</s:Group>
 	
 	<!-- The menu I hate-->	
@@ -101,10 +126,10 @@
 
 	<s:viewMenuItems>
 		
-		<s:ViewMenuItem color="#663366"  icon="C:/Program Files/Adobe/Adobe Flash Builder 4.7/assets/search-64.png" label="Поиск"/> 
-		<s:ViewMenuItem color="#663366"  icon="C:/Program Files/Adobe/Adobe Flash Builder 4.7/assets/rating-64.png" label="Рейтинг"/> 
-		<s:ViewMenuItem color="#663366"  icon="C:/Program Files/Adobe/Adobe Flash Builder 4.7/assets/news-64.png" label="Новости"/> 
-		<s:ViewMenuItem color="#663366"  icon="C:/Program Files/Adobe/Adobe Flash Builder 4.7/assets/user-64.png" label="Аккаунт"/>
+		<s:ViewMenuItem color="#663366"  icon="/assets/search-64.png" label="Поиск"/> 
+		<s:ViewMenuItem color="#663366"  icon="/assets/rating-64.png" label="Рейтинг"/> 
+		<s:ViewMenuItem color="#663366"  icon="/assets/news-64.png" label="Новости"/> 
+		<s:ViewMenuItem color="#663366"  icon="/assets/user-64.png" label="Аккаунт"/>
 	</s:viewMenuItems> 
 	
 	

@@ -24,15 +24,15 @@
 		
 	</fx:Script>
 		<s:navigationContent>
-			<s:Button icon="C:/Program Files/Adobe/Adobe Flash Builder 4.7/assets/icon-arrow-left-64px.png" horizontalCenter="left" click="button1_clickHandler(event);"/>
+			<s:Button icon="/assets/icon-arrow-left-64px.png" horizontalCenter="left" click="button1_clickHandler(event);"/>
 		</s:navigationContent>
 	
 		<s:titleContent>
-		<s:Image width="100%" source="C:/Program Files/Adobe/Adobe Flash Builder 4.7/assets/logo1-3.png" />
+		<s:Image width="100%" source="/assets/logo1-3.png" />
 			</s:titleContent>
 		
 		<s:actionContent>
-			<s:Button icon="C:/Program Files/Adobe/Adobe Flash Builder 4.7/assets/menu-circles-64px.png" horizontalCenter="right" click="button2_clickHandler(event);"/>
+			<s:Button icon="/assets/menu-circles-64px.png" horizontalCenter="right" click="button2_clickHandler(event);"/>
 		</s:actionContent>  
 	
 	
