@@ -77,7 +77,7 @@
 			
 			
 			// Placeholder fot loginInput
-			private var loginInput_text:String = "Имя пользователя";
+			private var loginInput_text:String = "Имя пользователя...";
 			
 			protected function loginInput_initializeHandler(event:FlexEvent):void
 			{
@@ -106,7 +106,7 @@
 			
 			
 			// Placeholder fot passwordInput
-			private var passwordInput_text:String = "Пароль";
+			private var passwordInput_text:String = "Пароль...";
 			protected function passwordInput_initializeHandler(event:FlexEvent):void
 			{
 				//For Place Holder for loginInput
@@ -150,12 +150,12 @@
 		</s:Label> 
 	</s:Group>
 	<s:Group width="100%" >
-		<s:TextInput  top="20" horizontalCenter="0" width="90%" height="200%"  fontSize="42"  id="loginInput" text="Имя пользователя" initialize="loginInput_initializeHandler(event)" />
+		<s:TextInput  top="20" horizontalCenter="0" width="90%" height="200%"  fontSize="42"  id="loginInput" text="Имя пользователя..." initialize="loginInput_initializeHandler(event)" />
 	
 	
 	</s:Group>
 	<s:Group width="100%" >
-		<s:TextInput top="20" bottom="20" horizontalCenter="0" width="90%" fontSize="42"  id="passwordInput" text="Пароль" initialize="passwordInput_initializeHandler(event)"/>
+		<s:TextInput top="20" bottom="20" horizontalCenter="0" width="90%" fontSize="42"  id="passwordInput" text="Пароль..." initialize="passwordInput_initializeHandler(event)"/>
 	</s:Group> 
 	
 	<s:Group width="100%" >

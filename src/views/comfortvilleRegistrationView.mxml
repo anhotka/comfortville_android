@@ -8,19 +8,119 @@
 		<!-- Place non-visual elements (e.g., services, value objects) here -->
 	</fx:Declarations>
 	
+	<fx:Script>
+		<![CDATA[
+			import flash.events.FocusEvent;
+			
+			import mx.events.FlexEvent;
+			import mx.rpc.events.FaultEvent;
+			import mx.rpc.events.ResultEvent;
+			
+			import model.Credentials;
+			
+			import services.authenticate.Authenticate;
+			
+			import tools.Settings;
+			
+			// Placeholder fot loginInput
+			private var loginInput_text:String = "Имя пользователя...";
+			
+			protected function loginInput_initializeHandler(event:FlexEvent):void
+			{
+				//For Place Holder for loginInput
+				loginInput.addEventListener(FocusEvent.FOCUS_IN, focusin);
+				loginInput.addEventListener(FocusEvent.FOCUS_OUT, focusout);  
+			}
+			
+			//fire when click to edit
+			public function focusin(event:Event ) : void
+			{
+				if(loginInput.text == loginInput_text)
+				{
+					loginInput.text = "";
+				}
+			}
+			
+			//fire when you clicked out
+			public function focusout(event:Event):void
+			{
+				if(loginInput.text == "")
+				{
+					loginInput.text = loginInput_text;
+				}
+			}
+			
+			
+			// Placeholder fot passwordInput
+			private var passwordInput_text:String = "Пароль...";
+			protected function passwordInput_initializeHandler(event:FlexEvent):void
+			{
+				//For Place Holder for loginInput
+				passwordInput.addEventListener(FocusEvent.FOCUS_IN, passwordfocusin);
+				passwordInput.addEventListener(FocusEvent.FOCUS_OUT, passwordfocusout);  
+			}
+			
+			//fire when click to edit
+			public function passwordfocusin(event:Event): void
+			{
+				if(passwordInput.text == passwordInput_text)
+				{
+					passwordInput.text = "";
+				}
+			}
+			
+			//fire when you clicked out
+			public function passwordfocusout(event:Event):void
+			{
+				if(passwordInput.text == "")
+				{
+					passwordInput.text = passwordInput_text;
+				}
+			}
+			
+			
+			// Placeholder fot emailInput
+			private var emailInput_text:String = "Электронная почта...";
+			protected function emailInput_initializeHandler(event:FlexEvent):void
+			{
+				//For Place Holder for loginInput
+				emailInput.addEventListener(FocusEvent.FOCUS_IN, emailfocusin);
+				emailInput.addEventListener(FocusEvent.FOCUS_OUT, emailfocusout);  
+			}
+			
+			//fire when click to edit
+			public function emailfocusin(event:Event): void
+			{
+				if(emailInput.text == emailInput_text)
+				{
+					emailInput.text = "";
+				}
+			}
+			
+			//fire when you clicked out
+			public function emailfocusout(event:Event):void
+			{
+				if(emailInput.text == "")
+				{
+					emailInput.text = emailInput_text;
+				}
+			}
+			
+		]]>
+	</fx:Script>
 	
 	<s:Group width="100%">
 		<s:Label horizontalCenter="0" text="Регистрация" top="40" width="90%" fontStyle="normal" color="#663366" fontSize="42" fontWeight="bold" fontFamily="PT Sans, sans-serif"> 
 		</s:Label> 
 	</s:Group>
 	<s:Group width="100%" >
-		<s:TextInput  top="20" horizontalCenter="0" width="90%" height="200%"  fontSize="42"  />
+		<s:TextInput id="loginInput" initialize="loginInput_initializeHandler(event)" text="Имя пользователя..." top="20" horizontalCenter="0" width="90%" height="200%"  fontSize="42"  />
 	</s:Group>
 	<s:Group width="100%" >
-		<s:TextInput top="20" bottom="20" horizontalCenter="0" width="90%" fontSize="42"  />
+		<s:TextInput id="passwordInput" initialize="passwordInput_initializeHandler(event)" text="Пароль..." top="20" bottom="20" horizontalCenter="0" width="90%" fontSize="42"  />
 	</s:Group> 
 	<s:Group width="100%" >
-		<s:TextInput bottom="20" horizontalCenter="0" width="90%" fontSize="42"  />
+		<s:TextInput id="emailInput" initialize="emailInput_initializeHandler(event)" text="Электронная почта..." bottom="20" horizontalCenter="0" width="90%" fontSize="42"  />
 	</s:Group> 
 	
 	
