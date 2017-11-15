@@ -13,14 +13,6 @@
 			import flash.events.FocusEvent;
 			
 			import mx.events.FlexEvent;
-			import mx.rpc.events.FaultEvent;
-			import mx.rpc.events.ResultEvent;
-			
-			import model.Credentials;
-			
-			import services.authenticate.Authenticate;
-			
-			import tools.Settings;
 			
 			// Placeholder fot loginInput
 			private var loginInput_text:String = "Имя пользователя...";
