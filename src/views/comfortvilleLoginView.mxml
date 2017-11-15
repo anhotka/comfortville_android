@@ -12,10 +12,8 @@
 		
 	<fx:Script>
 		<![CDATA[
-			import flash.display.Sprite;
 			import flash.events.FocusEvent;
 			
-			import mx.data.ChangeObject;
 			import mx.events.FlexEvent;
 			import mx.rpc.events.FaultEvent;
 			import mx.rpc.events.ResultEvent;
@@ -78,97 +76,59 @@
 			}
 			
 			
-	/*		var initialText:String = "Имя пользователя...";
-			loginInput.text = initialText;
-			
-		
-			loginInput.onSetFocus = function():void {
-				if( loginInput.text == initialText ) {
-					loginInput.text = "";
-				}
-			}
-			*/
-			
-	/*		private function loginInput_change(event:TextEvent)
-			{
-				var message='Имя пользователя...'
-				if (event.text == '') {
-					event.target.display = display.noPrint
-					event.text = message
-				} else {
-					event.target.display = display.visible
-				}		*/
-			
-			
-			
-			
-	//		loginInput.addEventListener(TextEvent.TEXT_INPUT, );
-		//	loginInput.addEventListener(FocusEvent.FOCUS_OUT, focusOut);
-			
-			// fire when click to edit
-			
-			
-			
-		
-
-				
-	/*	private function loginInput_change(event:TextEvent):void
-			{
-		
-			var placeholder_text:String = "Имя пользователя...";
-				if(loginInput.text == placeholder_text)
-				{
-					loginInput.text = ""; 
-				}
-				
-			}	*/
-			
-			
-			// fire when you clicked out
-	//		function focusOut(focus:FocusEvent):void
-		//	{
-		//		
-		//		if(loginInput.text == "")
-		//		{
-		//			loginInput.text = placeholder_text; 
-		//		}
-		//	}
-			
+			// Placeholder fot loginInput
 			private var loginInput_text:String = "Имя пользователя";
 			
 			protected function loginInput_initializeHandler(event:FlexEvent):void
-				
 			{
-				
-				//For Place Holder for sampleText
-				
+				//For Place Holder for loginInput
 				loginInput.addEventListener(FocusEvent.FOCUS_IN, focusin);
-				
 				loginInput.addEventListener(FocusEvent.FOCUS_OUT, focusout);  
-				
 			}
 			
 			//fire when click to edit
-			
-			public function focusin( event:Event ) : void
-				
+			public function focusin(event:Event ) : void
 			{
 					if(loginInput.text == loginInput_text)
-				
 				{
 					loginInput.text = "";
 				}
 			}
 			
 			//fire when you clicked out
-			
 			public function focusout(event:Event):void
-				
 			{
 					if(loginInput.text == "")
-					
 				{
 					loginInput.text = loginInput_text;
+				}
+			}
+			
+			
+			// Placeholder fot passwordInput
+			private var passwordInput_text:String = "Пароль";
+			protected function passwordInput_initializeHandler(event:FlexEvent):void
+			{
+				//For Place Holder for loginInput
+				passwordInput.addEventListener(FocusEvent.FOCUS_IN, passwordfocusin);
+				passwordInput.addEventListener(FocusEvent.FOCUS_OUT, passwordfocusout);  
+			}
+			
+			//fire when click to edit
+			public function passwordfocusin(event:Event): void
+			{
+				if(passwordInput.text == passwordInput_text)
+				{
+					passwordInput.text = "";
+				}
+			}
+			
+			//fire when you clicked out
+			public function passwordfocusout(event:Event):void
+			{
+				if(passwordInput.text == "")
+				{
+					passwordInput.text = passwordInput_text;
 				}
 			}
 			
@@ -190,12 +150,12 @@
 		</s:Label> 
 	</s:Group>
 	<s:Group width="100%" >
-		<s:TextInput  top="20" horizontalCenter="0" width="90%" height="200%"  fontSize="42"  id="loginInput" />
+		<s:TextInput  top="20" horizontalCenter="0" width="90%" height="200%"  fontSize="42"  id="loginInput" text="Имя пользователя" initialize="loginInput_initializeHandler(event)" />
 	
 	
 	</s:Group>
 	<s:Group width="100%" >
-		<s:TextInput top="20" bottom="20" horizontalCenter="0" width="90%" fontSize="42"  id="passwordInput"/>
+		<s:TextInput top="20" bottom="20" horizontalCenter="0" width="90%" fontSize="42"  id="passwordInput" text="Пароль" initialize="passwordInput_initializeHandler(event)"/>
 	</s:Group> 
 	
 	<s:Group width="100%" >
