@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:View xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		xmlns:s="library://ns.adobe.com/flex/spark" title="comfortvilleRatingView">
+	<s:layout>
+		<s:VerticalLayout/>
+	</s:layout>
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	
+	<fx:Script>
+		<![CDATA[
+			
+	
+			protected function search_clickHandler(event:MouseEvent):void
+			{
+				navigator.pushView(comfortvilleSearchView);}
+			
+					
+			protected function news_clickHandler(event:MouseEvent):void
+			{
+				navigator.pushView(comfortvilleNewsView);}
+			
+			protected function account_clickHandler(event:MouseEvent):void
+			{
+				navigator.pushView(comfortvilleAccountView);}
+	
+		]]>
+	</fx:Script>
+	
+	
+	
+	
+	
+	
+	
+	<s:viewMenuItems>
+		<s:ViewMenuItem color="#663366"  icon="/assets/search-64.png" label="Поиск" id="search" click="search_clickHandler(event)"/> 
+		<s:ViewMenuItem color="#663366"  icon="/assets/rating-64.png" label="Рейтинг" id="rating" /> 
+		<s:ViewMenuItem color="#663366"  icon="/assets/news-64.png" label="Новости" id="news" click="news_clickHandler(event)"/> 
+		<s:ViewMenuItem color="#663366"  icon="/assets/user-64.png" label="Аккаунт" id="account" click="account_clickHandler(event)"/>
+	</s:viewMenuItems> 
+</s:View>
