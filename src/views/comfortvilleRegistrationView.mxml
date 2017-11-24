@@ -14,6 +14,18 @@
 			
 			import mx.events.FlexEvent;
 			
+			import spark.components.View;
+			
+			import tools.Toast;
+		
+			
+			public function rulesForUsers_clickHandler(event:MouseEvent):void
+			{
+				navigator.pushView(comfortvilleRulesView);
+			}
+			
+			
+			
 			// Placeholder fot loginInput
 			private var loginInput_text:String = "Имя пользователя...";
 			
@@ -47,7 +59,7 @@
 			private var passwordInput_text:String = "Пароль...";
 			protected function passwordInput_initializeHandler(event:FlexEvent):void
 			{
-				//For Place Holder for loginInput
+				//For Place Holder for passwordInput
 				passwordInput.addEventListener(FocusEvent.FOCUS_IN, passwordfocusin);
 				passwordInput.addEventListener(FocusEvent.FOCUS_OUT, passwordfocusout);  
 			}
@@ -75,7 +87,7 @@
 			private var emailInput_text:String = "Электронная почта...";
 			protected function emailInput_initializeHandler(event:FlexEvent):void
 			{
-				//For Place Holder for loginInput
+				//For Place Holder for emailInput
 				emailInput.addEventListener(FocusEvent.FOCUS_IN, emailfocusin);
 				emailInput.addEventListener(FocusEvent.FOCUS_OUT, emailfocusout);  
 			}
@@ -97,6 +109,23 @@
 					emailInput.text = emailInput_text;
 				}
 			}
+			
+			
+	
+			//тост который не влазит и поверх не хочет
+			
+			public function checkBoxOVZ_clickHandler(event:MouseEvent):void
+			{	
+				new Toast(this, "Мы ввели этот пункт, потому что мнение человека, который непосредственно сталкивается с ограничениями городской среды, для нас особенно важно. Если вы выберете этот пункт, рамка вокруг вашего аватара будет оранжевого цвета, если не выберете - фиолетового, это единственное визуальное отличие", 5000, 480, 80, '#ffffff');
+				 
+				
+			}			
+			private function positionToast(context:View, x:Number, y:Number):void
+			{
+				positionToast(context,x,y);
+			}
+			
+	
 			
 		]]>
 	</fx:Script>
@@ -125,29 +154,31 @@
 	
 	
 	<s:Group width="100%" >
-		<s:HGroup width="100%" verticalAlign="top" horizontalAlign="left" left="35" >
-			<s:CheckBox scaleX="0.7" scaleY="0.7" />
+		<s:HGroup width="100%" verticalAlign="top" horizontalAlign="left" left="35" right="20">
+			<s:CheckBox scaleX="0.7" scaleY="0.7"  />
 			<s:Label width="100%" verticalAlign="bottom"  text="ОВЗ (у себя или близкого человека)"   fontStyle="normal" color="#663366"  fontWeight="bold" fontFamily="PT Sans, sans-serif"/>
+			<s:Label text="?"  verticalAlign="bottom" color="#ff9966" fontWeight="bold"  id="checkBoxOVZ" click="checkBoxOVZ_clickHandler(event)"  />
+					 
 		</s:HGroup>
 	</s:Group>
 	
-	<s:Group width="100%" >
+	<s:Group id="agreeWithRules" width="100%" >
 		<s:HGroup width="100%" verticalAlign="top" horizontalAlign="left" left="35" top="10">
 			<s:CheckBox scaleX="0.7" scaleY="0.7" />
-			<s:Label width="100%" verticalAlign="bottom"  text="Даю согласие на обработку моих персональных данных"   fontStyle="normal" color="#663366"  fontWeight="bold" fontFamily="PT Sans, sans-serif"/>
+			<s:Label width="100%" verticalAlign="bottom" id="rulesForUsers" click="rulesForUsers_clickHandler(event)"  text="Ознакомился и согласен с правилами пользователя"  textDecoration="underline" fontStyle="normal" color="#663366"  fontWeight="bold" fontFamily="PT Sans, sans-serif"/>
 		</s:HGroup>
 	</s:Group>
 	
 	<s:Group width="100%" >
 		<s:HGroup width="100%" verticalAlign="top" horizontalAlign="left" left="35" top="10">
 			<s:CheckBox scaleX="0.7" scaleY="0.7"  verticalCenter="0"/>
-			<s:Label width="100%" verticalAlign="bottom" text="Ознакомился и согласен с правилами пользователя"   fontStyle="normal" color="#663366"  fontWeight="bold" fontFamily="PT Sans, sans-serif"/>
+			<s:Label width="100%" verticalAlign="bottom" text="Даю согласие на обработку моих персональных данных"  fontStyle="normal" color="#663366"  fontWeight="bold" fontFamily="PT Sans, sans-serif"/>
 		</s:HGroup>
 	</s:Group>
 	
 	<s:Group width="100%">
-		<s:Button label="Зарегистрироваться" horizontalCenter="0" top="40" />
-		<!--	   chromeColor="#ff9966" color="white" fontStyle="normal" fontSize="42" fontWeight="bold" fontFamily="PT Sans, sans-serif" -->
+		<s:Button label="Зарегистрироваться" horizontalCenter="0" top="40"/>
+		
 		
 	</s:Group>
 	
