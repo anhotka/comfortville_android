@@ -14,6 +14,22 @@
 			import tools.Settings;
 			private var people:People = Settings.people;
 
+			protected function search_clickHandler(event:MouseEvent):void
+			{
+				navigator.pushView(comfortvilleSearchView);}
+			
+			protected function rating_clickHandler(event:MouseEvent):void
+			{
+				navigator.pushView(comfortvilleRatingView);}
+			
+			protected function news_clickHandler(event:MouseEvent):void
+			{
+				navigator.pushView(comfortvilleNewsView);}
+			
+
+			
+			
+			
 			protected function getButton_clickHandler(event:MouseEvent):void
 			{
 				people.updateCredentials();
@@ -43,11 +59,10 @@
 	
 	
 	<s:viewMenuItems>
-		
-		<s:ViewMenuItem color="#663366"  icon="/assets/search-64.png" label="Поиск"/> 
-		<s:ViewMenuItem color="#663366"  icon="/assets/rating-64.png" label="Рейтинг"/> 
-		<s:ViewMenuItem color="#663366"  icon="/assets/news-64.png" label="Новости"/> 
-		<s:ViewMenuItem color="#663366"  icon="/assets/user-64.png" label="Аккаунт"/>
+		<s:ViewMenuItem color="#663366"  icon="/assets/search-64.png" label="Поиск" id="search" click="search_clickHandler(event)"/> 
+		<s:ViewMenuItem color="#663366"  icon="/assets/rating-64.png" label="Рейтинг" id="rating" click="rating_clickHandler(event)"/> 
+		<s:ViewMenuItem color="#663366"  icon="/assets/news-64.png" label="Новости" id="news" click="news_clickHandler(event)"/> 
+		<s:ViewMenuItem color="#663366"  icon="/assets/user-64.png" label="Аккаунт" id="account" />
 	</s:viewMenuItems> 
 	
 </s:View>
