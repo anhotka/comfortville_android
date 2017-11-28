@@ -92,20 +92,20 @@
 		<s:Group width="90%" >
 			<s:Label  left="40"  text="4,3" color="#ffcc66" fontSize="42"/>
 			<s:VGroup left="160" verticalCenter="0" >
-				<s:Label width="400" text="Дольче Вита и другие приключения лейтенанта Вахтангова в Париже" fontSize="28" color="#663366" />
-				<s:Label text="Транспорт" fontSize="18" color="#663366" textDecoration="underline"/>
+				<s:Label width="400" text="Департамент управления мирового господства администрации Ленинского района Энгельской области" fontSize="28" color="#663366" />
+				<s:Label text="Государственные учреждения" fontSize="18" color="#663366" textDecoration="underline"/>
 			</s:VGroup>
 		</s:Group>
 	</s:HGroup>	
 	
 	<s:Group width="100%" top="40" >
-		<s:Label horizontalCenter="0" text="Мои отзывы" top="20" width="90%" fontStyle="normal" color="#663366" fontSize="36" fontWeight="bold" fontFamily="PT Sans, sans-serif"> </s:Label> 
+		<s:Label horizontalCenter="0" text="Мои отзывы" top="40" width="90%" fontStyle="normal" color="#663366" fontSize="36" fontWeight="bold" fontFamily="PT Sans, sans-serif"> </s:Label> 
 	</s:Group>
 	
 	
 	
-	<s:Group width="100%" top="20" >
-		<s:Label horizontalCenter="0" maxDisplayedLines="1" text="«Это заведение самое заведенистое в мире, и никакие дрцгие заведения не перезаведенят это заведение по его заведенитости»" top="20" width="90%" fontStyle="normal" color="#663366" fontSize="28"  fontFamily="PT Sans, sans-serif"> </s:Label> 
+	<s:Group width="100%"  >
+		<s:Label horizontalCenter="0" maxDisplayedLines="1" text="«Это заведение самое заведенистое в мире, и никакие дрцгие заведения не перезаведенят это заведение по его заведенитости»" width="90%" fontStyle="normal" color="#663366" fontSize="28"  fontFamily="PT Sans, sans-serif"> </s:Label> 
 	</s:Group>
 	
 	<s:Group width="100%">
@@ -119,7 +119,7 @@
 	</s:Group>
 	
 	<s:Group width="100%">
-		<s:Label textAlign="end"  horizontalCenter="0" maxDisplayedLines="1" text="Дольче Вита и другие приключения лейтенанта Вахтангова в Париже" fontWeight="bold" width="90%" fontStyle="normal" color="#663366" fontSize="28" fontFamily="PT Sans, sans-serif"> </s:Label> 
+		<s:Label textAlign="end"  horizontalCenter="0" maxDisplayedLines="1" text="Департамент управления мирового господства администрации Ленинского района Энгельской области" fontWeight="bold" width="90%" fontStyle="normal" color="#663366" fontSize="28" fontFamily="PT Sans, sans-serif"> </s:Label> 
 	</s:Group>
 	
 	
