@@ -156,17 +156,16 @@
 	</s:Group>
 	<s:Group width="100%" >
 		<s:TextInput  top="20" horizontalCenter="0" width="90%" height="200%"  fontSize="42"  id="loginInput" text="Имя пользователя..." initialize="loginInput_initializeHandler(event)" />
-	
-	
 	</s:Group>
+	
 	<s:Group width="100%" >
 		<s:TextInput top="20" bottom="20" horizontalCenter="0" width="90%" fontSize="42"  id="passwordInput" text="Пароль..." initialize="passwordInput_initializeHandler(event)"/>
 	</s:Group> 
 	
 	<s:Group width="100%" >
 		<s:HGroup width="90%" verticalAlign="bottom" horizontalAlign="center" horizontalCenter="0" >
-		<s:CheckBox scaleX="0.7" scaleY="0.7" id="rememberCheck" verticalCenter="0"/>
-		<s:Label verticalAlign="bottom" text="Запомнить меня" top="40"  fontStyle="normal" color="#663366" fontSize="36" fontWeight="bold" fontFamily="PT Sans, sans-serif"/>
+			<s:CheckBox scaleX="0.7" scaleY="0.7" id="rememberCheck" verticalCenter="0"/>
+			<s:Label verticalAlign="bottom" text="Запомнить меня" top="40"  fontStyle="normal" color="#663366" fontSize="36" fontWeight="bold" fontFamily="PT Sans, sans-serif"/>
 		</s:HGroup>
 	</s:Group>
 	
