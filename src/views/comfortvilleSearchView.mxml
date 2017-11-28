@@ -35,7 +35,10 @@
 
 
 
-
+	<s:Group width="100%">
+		<s:Label horizontalCenter="0" text="Поиск" top="40" width="90%" fontStyle="normal" color="#663366" fontSize="42" fontWeight="bold" fontFamily="PT Sans, sans-serif"> 
+		</s:Label> 
+	</s:Group>
 
 
 
