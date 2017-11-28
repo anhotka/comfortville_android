@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <s:View xmlns:fx="http://ns.adobe.com/mxml/2009" 
 		xmlns:s="library://ns.adobe.com/flex/spark" title="comfortvilleAccountView" xmlns:people="services.people.*" xmlns:tools="tools.*">
-	
+	<s:layout>
+		<s:VerticalLayout/>
+	</s:layout>
 	
 	<fx:Script>
 		<![CDATA[
@@ -30,13 +32,13 @@
 			
 			
 			
-			protected function getButton_clickHandler(event:MouseEvent):void
+	/*		protected function getButton_clickHandler(event:MouseEvent):void
 			{
 				people.updateCredentials();
 				peopleResponder.token = people.getAll();
 				
 			}
-			
+	*/		
 			protected function peopleResponder_resultHandler(event:ResultEvent):void
 			{
 				trace(event.result);			
@@ -54,8 +56,80 @@
 		<s:CallResponder id="peopleResponder" result="peopleResponder_resultHandler(event)" 
 						 fault="peopleResponder_faultHandler(event)" />
 	</fx:Declarations>
-	<s:Button id="getButton" click="getButton_clickHandler(event)"/>
+<!--	<s:Button id="getButton" click="getButton_clickHandler(event)"/> -->
 	
+	<s:Group width="100%">
+		<s:Label horizontalCenter="0" text="Личный кабинет" top="40" width="90%" fontStyle="normal" color="#663366" fontSize="42" fontWeight="bold" fontFamily="PT Sans, sans-serif"> </s:Label> 
+	</s:Group>
+	
+	<s:HGroup width="100%" paddingTop="20" >
+		<s:Group width="90%" >
+			<s:Image   left="40"  source="/assets/icons8-Мим-96.png"/>
+			<s:VGroup left="160"  verticalCenter="0" >
+				<s:Label text="Рулон Обоев" fontSize="36" color="#663366" />
+				<s:Label text="(Выйти)" fontSize="18" />
+			</s:VGroup>
+		</s:Group>
+	</s:HGroup>
+	
+	
+	
+	<s:Group width="100%" top="40" horizontalCenter="0">
+		<s:Label horizontalCenter="0" text="Мои оценки" top="20" width="90%" fontStyle="normal" color="#663366" fontSize="36" fontWeight="bold" fontFamily="PT Sans, sans-serif"> </s:Label> 
+	</s:Group>
+	
+	<s:HGroup width="100%" paddingTop="20" >
+		<s:Group width="90%" >
+			<s:Label  left="40"  text="4,3" color="#ffcc66" fontSize="42"/>
+			<s:VGroup left="160" verticalCenter="0" >
+				<s:Label width="400" text="Старый моряк" fontSize="28" color="#663366" />
+				<s:Label text="Бары, клубы" fontSize="18" color="#663366" textDecoration="underline"/>
+			</s:VGroup>
+		</s:Group>
+	</s:HGroup>	
+	
+	<s:HGroup width="100%" paddingTop="20" >
+		<s:Group width="90%" >
+			<s:Label  left="40"  text="4,3" color="#ffcc66" fontSize="42"/>
+			<s:VGroup left="160" verticalCenter="0" >
+				<s:Label width="400" text="Департамент управления мирового господства администрации Ленинского района Энгельской области" fontSize="28" color="#663366" />
+				<s:Label text="Государственные учреждения" fontSize="18" color="#663366" textDecoration="underline"/>
+			</s:VGroup>
+		</s:Group>
+	</s:HGroup>	
+	
+	<s:Group width="100%" top="40" >
+		<s:Label horizontalCenter="0" text="Мои отзывы" top="40" width="90%" fontStyle="normal" color="#663366" fontSize="36" fontWeight="bold" fontFamily="PT Sans, sans-serif"> </s:Label> 
+	</s:Group>
+	
+	
+	
+	<s:Group width="100%"  >
+		<s:Label horizontalCenter="0" maxDisplayedLines="1" text="«Это заведение самое заведенистое в мире, и никакие дрцгие заведения не перезаведенят это заведение по его заведенитости»" width="90%" fontStyle="normal" color="#663366" fontSize="28"  fontFamily="PT Sans, sans-serif"> </s:Label> 
+	</s:Group>
+	
+	<s:Group width="100%">
+		<s:Label textAlign="end" horizontalCenter="0" maxDisplayedLines="1" text="Старый моряк" fontWeight="bold" width="90%" fontStyle="normal" color="#663366" fontSize="28" fontFamily="PT Sans, sans-serif"> </s:Label> 
+	</s:Group>
+
+	
+	
+	<s:Group width="100%" top="20" >
+		<s:Label horizontalCenter="0" maxDisplayedLines="1" text="«Пандуса нет, лифта нет, все ужасно и темнота еще, хоть глаз выколи»" top="20" width="90%" fontStyle="normal" color="#663366" fontSize="28"  fontFamily="PT Sans, sans-serif"> </s:Label> 
+	</s:Group>
+	
+	<s:Group width="100%">
+		<s:Label textAlign="end"  horizontalCenter="0" maxDisplayedLines="1" text="Департамент управления мирового господства администрации Ленинского района Энгельской области" fontWeight="bold" width="90%" fontStyle="normal" color="#663366" fontSize="28" fontFamily="PT Sans, sans-serif"> </s:Label> 
+	</s:Group>
+	
+	
+	<s:Group width="100%" top="20" >
+		<s:Label horizontalCenter="0" maxDisplayedLines="1" text="«Двери узкие, фиг войдешь»" top="20" width="90%" fontStyle="normal" color="#663366" fontSize="28"  fontFamily="PT Sans, sans-serif"> </s:Label> 
+	</s:Group>
+	
+	<s:Group width="100%">
+		<s:Label textAlign="end"  horizontalCenter="0" maxDisplayedLines="1" text="Дядя Шурик" fontWeight="bold" width="90%" fontStyle="normal" color="#663366" fontSize="28" fontFamily="PT Sans, sans-serif"> </s:Label> 
+	</s:Group>
 	
 	
 	<s:viewMenuItems>

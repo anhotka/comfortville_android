@@ -52,7 +52,7 @@
 			{
 				// Вставить навигатор, закомментить логин респондер токен
 				// loginResponder.token = authenticate.authenticate(getCredentials().toJson());
-				navigator.pushView(comfortvilleAccountView);
+					navigator.pushView(comfortvilleAccountView);
 			}
 			
 			protected function registrationButton_clickHandler (event:MouseEvent):void
