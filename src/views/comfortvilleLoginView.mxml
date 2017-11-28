@@ -31,23 +31,28 @@
 				return new Credentials(loginInput.text, passwordInput.text, rememberCheck.selected);
 			}
 			
-	/*		private function loginInput_change(event:TextEvent)
+			protected function search_clickHandler(event:MouseEvent):void
 			{
-					var message='Имя пользователя...'
-				if (event.text == '') {
-					event.target.display = display.noPrint
-					event.text = message
-					} else {
-						event.target.display = display.visible
-					}
-			} */
+					navigator.pushView(comfortvilleSearchView);}
+				
+			protected function rating_clickHandler(event:MouseEvent):void
+				{
+					navigator.pushView(comfortvilleRatingView);}
+					
+			protected function news_clickHandler(event:MouseEvent):void
+					{
+					navigator.pushView(comfortvilleNewsView);}
+						
+			protected function account_clickHandler(event:MouseEvent):void
+						{
+					navigator.pushView(comfortvilleAccountView);}
 			
 			
 			protected function loginButton_clickHandler(event:MouseEvent):void
 			{
 				// Вставить навигатор, закомментить логин респондер токен
 				// loginResponder.token = authenticate.authenticate(getCredentials().toJson());
-				navigator.pushView(comfortvilleAccountView);
+					navigator.pushView(comfortvilleAccountView);
 			}
 			
 			protected function registrationButton_clickHandler (event:MouseEvent):void
@@ -109,7 +114,7 @@
 			private var passwordInput_text:String = "Пароль...";
 			protected function passwordInput_initializeHandler(event:FlexEvent):void
 			{
-				//For Place Holder for loginInput
+				//For Place Holder for passwordInput
 				passwordInput.addEventListener(FocusEvent.FOCUS_IN, passwordfocusin);
 				passwordInput.addEventListener(FocusEvent.FOCUS_OUT, passwordfocusout);  
 			}
@@ -175,17 +180,17 @@
 		<s:Label id="registrationButton" click="registrationButton_clickHandler(event)" horizontalCenter="0" text="Или зарегистрируйтесь" textDecoration="underline" top="20" fontStyle="normal" fontWeight="bold" color="#663366" fontSize="36" fontFamily="PT Sans, sans-serif" />
 	</s:Group>
 	
-	<!-- The menu I hate-->	
+
+
 	
 
 	
 
 	<s:viewMenuItems>
-		
-		<s:ViewMenuItem color="#663366"  icon="/assets/search-64.png" label="Поиск"/> 
-		<s:ViewMenuItem color="#663366"  icon="/assets/rating-64.png" label="Рейтинг"/> 
-		<s:ViewMenuItem color="#663366"  icon="/assets/news-64.png" label="Новости"/> 
-		<s:ViewMenuItem color="#663366"  icon="/assets/user-64.png" label="Аккаунт"/>
+		<s:ViewMenuItem color="#663366"  icon="/assets/search-64.png" label="Поиск" id="search" click="search_clickHandler(event)"/> 
+		<s:ViewMenuItem color="#663366"  icon="/assets/rating-64.png" label="Рейтинг" id="rating" click="rating_clickHandler(event)"/> 
+		<s:ViewMenuItem color="#663366"  icon="/assets/news-64.png" label="Новости" id="news" click="news_clickHandler(event)"/> 
+		<s:ViewMenuItem color="#663366"  icon="/assets/user-64.png" label="Аккаунт" id="account" click="account_clickHandler(event)"/>
 	</s:viewMenuItems> 
 	
 	
