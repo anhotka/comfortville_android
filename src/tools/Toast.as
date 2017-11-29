@@ -15,7 +15,7 @@
 		          *  CONSTRUCTER
 		          */
 			 
-			public function Toast(context:View, textToDisplay:String, timeOut:Number = 3000, width:Number = 290, height:Number = 480, color:String = '#454545', x:Number = NaN, y:Number = NaN):void
+			public function Toast(context:View, textToDisplay:String, timeOut:Number = 3000, percentWidth:Number = NaN, percentHeight:Number = NaN, color:String = '#454545', x:Number = NaN, y:Number = NaN):void
 		        {
 			            super();
 			 
@@ -26,22 +26,24 @@
 			            });
 			            timer.start();
 			 
-			            createUI(textToDisplay, color, width, height);
+			            createUI(textToDisplay, color, percentWidth, percentHeight);
 			 
 			            // TOAST POSITION
 			            positionToast(context);
 						
-						
+				
 		        }
 		 
 			
+			
+
 				
 		         /**
 		          *  CREATE TOAST UI COMPONENTS
 		          */
-		        private function createUI(textToDisplay:String, color:String, width:Number, height:Number):void
+		        private function createUI(textToDisplay:String, color:String, percentWidth:Number, percentHeight:Number):void
 		        {
-			            selfProperties(color, width, height);
+			            selfProperties(color, percentWidth, percentHeight);
 			            addText(textToDisplay);
 						
 		        }
@@ -49,15 +51,16 @@
 		         /**
 		          * ASSIGNING ATTRIBUTES TO THE BASE CONTAINER
 		          */
-		        private function selfProperties(color:String, width:Number, height:Number):void
+		        private function selfProperties(color:String, percentWidth:Number, percentHeight:Number):void
 		        {
-			            this.width=width;
-			            this.height=height;
-			            this.setStyle('backgroundAlpha','0.75');
+			            this.percentWidth=percentWidth;
+			            this.percentHeight=percentHeight;
+			            this.setStyle('backgroundAlpha','1');
 			            this.setStyle('backgroundColor',color);
-			            this.setStyle('borderColor','#663366');
+			            this.setStyle('borderColor','#ff9966');
 			            this.setStyle('borderWeight','3');
 			            this.setStyle('cornerRadius','7');
+						this.setStyle('horizontalCenter', '0');
 			 
 			            var vl:VerticalLayout = new VerticalLayout();
 			            vl.horizontalAlign = "center";
@@ -71,13 +74,14 @@
 		        private function addText(textToDisplay:String):void
 		        {
 			            var lbl:Label = new Label();
-			            lbl.setStyle('color','#000000');
-			            lbl.setStyle('fontSize','24');
-						lbl.setStyle('fontWeight','bold');
+			            lbl.setStyle('color','#663366');
+			            lbl.setStyle('fontSize','32');
+						lbl.setStyle('fontWeight','normal');
 			            lbl.text = textToDisplay;
 			            lbl.setStyle('textAlign', 'center');
-			            lbl.width = this.width;
-						lbl.height = this.height;
+			            lbl.percentWidth = this.percentWidth;
+						lbl.percentHeight = this.percentHeight;
+						lbl.setStyle('verticalAlign', 'middle');
 			 
 			            this.addElement(lbl);
 		        }
@@ -104,8 +108,8 @@
 					                    throw new Error("Toast : 'Y' attribute also needs to be specified");
 				                }
 				 
-				                this.x = (context.width / 2) - (this.width / 2);
-				                this.y = (context.height * 3 / 4) - (this.height / 2);
+				                this.x = (context.percentWidth / 2) - (this.percentWidth / 2);
+				                this.y = (context.percentHeight * 3 / 4) - (this.percentHeight / 2);
 			            }
 			 
 			            // IF PREVIOUSLY ADDED COMPONENT IS A TOAST, RE-ORDER TO MANAGE TIMER
