@@ -31,10 +31,12 @@
 			            // TOAST POSITION
 			            positionToast(context);
 						
-						
+				
 		        }
 		 
 			
+			
+
 				
 		         /**
 		          *  CREATE TOAST UI COMPONENTS
