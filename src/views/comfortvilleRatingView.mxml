@@ -31,7 +31,15 @@
 	
 	
 	
-	
+	<s:VGroup width="100%" height="100%" >
+		<s:Scroller width="100%" height="100%" horizontalCenter="0">
+			<s:VGroup>
+				
+				
+				
+			</s:VGroup>
+		</s:Scroller>
+	</s:VGroup>  
 	
 	
 	<s:viewMenuItems>
