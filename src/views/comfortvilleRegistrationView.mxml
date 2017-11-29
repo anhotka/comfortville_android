@@ -128,11 +128,16 @@
 			
 	
 			//тост который не влазит и поверх не хочет
+			private var asd:Toast;
 			
 			public function checkBoxOVZ_clickHandler(event:MouseEvent):void
 			{	
-				new Toast(this, "Мы ввели этот пункт, потому что мнение человека, который непосредственно сталкивается с ограничениями городской среды, для нас особенно важно", 7000, 100, 65, '#ffffff');
-				 
+			
+				if (asd)
+				asd.destroyToast();
+				asd = new Toast(this, "Мы ввели этот пункт, потому что мнение человека, который непосредственно сталкивается с ограничениями городской среды, для нас особенно важно", 7000, 100, 65, '#ffffff');
+				
+			
 				
 			}			
 			private function positionToast(context:View, x:Number, y:Number):void
@@ -140,7 +145,8 @@
 				positionToast(context,x,y);
 			}
 			
-	
+					
+			
 			
 		]]>
 	</fx:Script>

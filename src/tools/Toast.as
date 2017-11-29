@@ -11,33 +11,49 @@
 	 
 	    public class Toast extends BorderContainer
 	    {
+			private var active:Boolean = false;
+			private var ctx:View;
 		         /**
 		          *  CONSTRUCTER
 		          */
 			 
 			public function Toast(context:View, textToDisplay:String, timeOut:Number = 3000, percentWidth:Number = NaN, percentHeight:Number = NaN, color:String = '#454545', x:Number = NaN, y:Number = NaN):void
 		        {
+						ctx = context;
 			            super();
-			 
+				    this.active = true;
 			            // TIMER TO 'REMOVE' TOAST AFTER THE SPECIFIED 'TIMEOUT'
 			            var timer:Timer = new Timer(timeOut, 1);
-			            timer.addEventListener(TimerEvent.TIMER_COMPLETE, function(event:TimerEvent):void{
+			            timer.addEventListener(TimerEvent.TIMER_COMPLETE, function(event:TimerEvent):void
+							{
 				                context.removeElementAt(context.numElements - 1);
-			            });
+								this.active = false;
+			          		});
 			            timer.start();
 			 
 			            createUI(textToDisplay, color, percentWidth, percentHeight);
 			 
 			            // TOAST POSITION
 			            positionToast(context);
-						
+				
+					
 				
 		        }
 		 
-			
-			
+
+			public function destroyToast():void
+			{
+				if(this.active)
+				ctx.removeElementAt(ctx.numElements - 1);	
+			}
+
+			public function isActive():Boolean
+			{
+				return this.isActive();
+			}
 
 				
+			
 		         /**
 		          *  CREATE TOAST UI COMPONENTS
 		          */
