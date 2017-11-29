@@ -72,7 +72,9 @@
 		</s:Group>
 	</s:HGroup>
 	
-	
+	<s:VGroup width="100%" height="100%" >
+		<s:Scroller width="100%" height="100%" horizontalCenter="0">
+			<s:VGroup>
 	
 	<s:Group width="100%" top="40" horizontalCenter="0">
 		<s:Label horizontalCenter="0" text="Мои оценки" top="20" width="90%" fontStyle="normal" color="#663366" fontSize="36" fontWeight="bold" fontFamily="PT Sans, sans-serif"> </s:Label> 
@@ -131,7 +133,12 @@
 		<s:Label textAlign="end"  horizontalCenter="0" maxDisplayedLines="1" text="Дядя Шурик" fontWeight="bold" width="90%" fontStyle="normal" color="#663366" fontSize="28" fontFamily="PT Sans, sans-serif"> </s:Label> 
 	</s:Group>
 	
-	
+				
+			</s:VGroup>
+		</s:Scroller>
+	</s:VGroup>  
+				
+				
 	<s:viewMenuItems>
 		<s:ViewMenuItem color="#663366"  icon="/assets/search-64.png" label="Поиск" id="search" click="search_clickHandler(event)"/> 
 		<s:ViewMenuItem color="#663366"  icon="/assets/rating-64.png" label="Рейтинг" id="rating" click="rating_clickHandler(event)"/> 
