@@ -43,7 +43,9 @@
 			}
 
 			
-		
+			protected function food_clickHandler(event:MouseEvent):void
+			{
+				navigator.pushView(comfortvilleCategoryView);}
 			
 			protected function rating_clickHandler(event:MouseEvent):void
 			{
@@ -82,7 +84,7 @@
 				
 <s:HGroup paddingTop="20" width="100%" horizontalAlign="center" verticalAlign="middle" >
 	<s:Group  >
-		<s:Image left="5" bottom="5" right="5" top="5" 
+		<s:Image id="food" click="food_clickHandler(event)" left="5" bottom="5" right="5" top="5" 
 				 source="/assets/icons8-Ресторан-128.png"/>
 	</s:Group>
 	<s:Group >

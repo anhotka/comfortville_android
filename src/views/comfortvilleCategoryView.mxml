@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:View xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		xmlns:s="library://ns.adobe.com/flex/spark" title="comfortvilleCategoryView">
+	<s:layout>
+		<s:VerticalLayout/>
+	</s:layout>
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	
+	<fx:Script>
+		<![CDATA[
+			import mx.rpc.events.FaultEvent;
+			import mx.rpc.events.ResultEvent;
+			
+			
+		
+			
+		
+			
+			protected function search_clickHandler(event:MouseEvent):void
+			{
+				navigator.pushView(comfortvilleSearchView);}
+			
+			protected function rating_clickHandler(event:MouseEvent):void
+			{
+				navigator.pushView(comfortvilleRatingView);}
+			
+			protected function news_clickHandler(event:MouseEvent):void
+			{
+				navigator.pushView(comfortvilleNewsView);}
+	
+	
+		]]>
+	</fx:Script>	
+	
+	
+	
+	<s:Group width="100%">
+		<s:Label horizontalCenter="0" text="Поиск объекта" top="40" width="90%" fontStyle="normal" color="#663366" fontSize="42" fontWeight="bold" fontFamily="PT Sans, sans-serif"> </s:Label> 
+	</s:Group>
+	
+	<s:HGroup width="100%" paddingLeft="30" paddingTop="20">
+		<s:Image  source="/assets/icon-arrow-up-32px.png"/>
+				<s:Label horizontalCenter="0" text="Еда" top="20" width="90%" fontStyle="normal" color="#663366" fontSize="36" fontWeight="bold" fontFamily="PT Sans, sans-serif"> </s:Label> 
+	</s:HGroup>
+	<s:Group width="100%">	
+		<s:Label horizontalCenter="0" text="Столовые, рестораны, кафе"  width="90%" fontStyle="normal" color="#663366" fontSize="28" fontWeight="normal" fontFamily="PT Sans, sans-serif"> </s:Label> 
+	</s:Group>
+	
+	<s:VGroup width="100%" height="100%" >
+		<s:Scroller width="100%" height="100%" horizontalCenter="0">
+			<s:VGroup>
+	
+	
+				<s:HGroup width="100%" paddingTop="40" >
+					<s:Group width="90%" >
+						<s:Label  left="40"  text="4,5" color="#ff9966" fontSize="42"/>
+						<s:VGroup left="160" verticalCenter="0" >
+							<s:Label width="400" text="Старый моряк" fontSize="32" fontWeight="bold" color="#663366" />
+							<s:Label text="Ресторан" fontSize="24" color="#663366"/>
+						</s:VGroup>
+					</s:Group>
+				</s:HGroup>	
+				
+				
+				
+				<s:HGroup width="100%" paddingTop="10" >
+					<s:Group width="90%" >
+						<s:Label  left="40"  text="4,4" color="#ff9966" fontSize="42"/>
+						<s:VGroup left="160" verticalCenter="0" >
+							<s:Label width="400" text="ИП Иванов М.С." fontSize="32" fontWeight="bold" color="#663366" />
+							<s:Label text="Кафе" fontSize="24" color="#663366" />
+						</s:VGroup>
+					</s:Group>
+				</s:HGroup>	
+				
+				<s:HGroup width="100%" paddingTop="10" >
+					<s:Group width="90%" >
+						<s:Label  left="40"  text="4,3" color="#ff9966" fontSize="42"/>
+						<s:VGroup left="160" verticalCenter="0" >
+							<s:Label width="400" text="Утка по-пекински" fontSize="32" fontWeight="bold" color="#663366" />
+							<s:Label text="Столовая" fontSize="24" color="#663366" />
+						</s:VGroup>
+					</s:Group>
+				</s:HGroup>	
+				
+				<s:HGroup width="100%" paddingTop="10" >
+					<s:Group width="90%" >
+						<s:Label  left="40"  text="4,3" color="#ff9966" fontSize="42"/>
+						<s:VGroup left="160" verticalCenter="0" >
+							<s:Label width="400" text="Гусь по-сеульски" fontSize="32" fontWeight="bold" color="#663366" />
+							<s:Label text="Кафе" fontSize="24" color="#663366" />
+						</s:VGroup>
+					</s:Group>
+				</s:HGroup>	
+				
+				<s:HGroup width="100%" paddingTop="10" >
+					<s:Group width="90%" >
+						<s:Label  left="40"  text="4,3" color="#ff9966" fontSize="42"/>
+						<s:VGroup left="160" verticalCenter="0" >
+							<s:Label width="400" text="Цыплята по-английски" fontSize="32" fontWeight="bold" color="#663366" />
+							<s:Label text="Кафе" fontSize="24" color="#663366" />
+						</s:VGroup>
+					</s:Group>
+				</s:HGroup>	
+	
+	
+	
+			</s:VGroup>
+		</s:Scroller>
+	</s:VGroup>  
+	
+	
+	
+	<s:viewMenuItems>
+		<s:ViewMenuItem color="#663366"  icon="/assets/search-64.png" label="Поиск" id="search" click="search_clickHandler(event)"/> 
+		<s:ViewMenuItem color="#663366"  icon="/assets/rating-64.png" label="Рейтинг" id="rating" click="rating_clickHandler(event)"/> 
+		<s:ViewMenuItem color="#663366"  icon="/assets/news-64.png" label="Новости" id="news" click="news_clickHandler(event)"/> 
+		<s:ViewMenuItem color="#663366"  icon="/assets/user-64.png" label="Аккаунт" id="account" />
+	</s:viewMenuItems> 
+	
+</s:View>
