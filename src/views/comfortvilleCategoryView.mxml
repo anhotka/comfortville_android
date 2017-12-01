@@ -64,6 +64,7 @@
 						<s:VGroup left="160" verticalCenter="0" >
 							<s:Label width="400" text="Старый моряк" fontSize="32" fontWeight="bold" color="#663366" />
 							<s:Label text="Ресторан" fontSize="24" color="#663366"/>
+							<s:Label text="Ленина 48" fontSize="24" color="#663366"/>
 						</s:VGroup>
 					</s:Group>
 				</s:HGroup>	
@@ -76,6 +77,7 @@
 						<s:VGroup left="160" verticalCenter="0" >
 							<s:Label width="400" text="ИП Иванов М.С." fontSize="32" fontWeight="bold" color="#663366" />
 							<s:Label text="Кафе" fontSize="24" color="#663366" />
+							<s:Label text="Мира 5" fontSize="24" color="#663366"/>
 						</s:VGroup>
 					</s:Group>
 				</s:HGroup>	
@@ -86,6 +88,7 @@
 						<s:VGroup left="160" verticalCenter="0" >
 							<s:Label width="400" text="Утка по-пекински" fontSize="32" fontWeight="bold" color="#663366" />
 							<s:Label text="Столовая" fontSize="24" color="#663366" />
+							<s:Label text="Мира 7" fontSize="24" color="#663366"/>
 						</s:VGroup>
 					</s:Group>
 				</s:HGroup>	
@@ -96,6 +99,7 @@
 						<s:VGroup left="160" verticalCenter="0" >
 							<s:Label width="400" text="Гусь по-сеульски" fontSize="32" fontWeight="bold" color="#663366" />
 							<s:Label text="Кафе" fontSize="24" color="#663366" />
+							<s:Label text="Проспект Победы 178" fontSize="24" color="#663366"/>
 						</s:VGroup>
 					</s:Group>
 				</s:HGroup>	
@@ -106,6 +110,7 @@
 						<s:VGroup left="160" verticalCenter="0" >
 							<s:Label width="400" text="Цыплята по-английски" fontSize="32" fontWeight="bold" color="#663366" />
 							<s:Label text="Кафе" fontSize="24" color="#663366" />
+							<s:Label text="Ленина 17" fontSize="24" color="#663366"/>
 						</s:VGroup>
 					</s:Group>
 				</s:HGroup>	
@@ -120,7 +125,7 @@
 	
 	<s:viewMenuItems>
 		<s:ViewMenuItem color="#663366"  icon="/assets/search-64.png" label="Поиск" id="search" click="search_clickHandler(event)"/> 
-		<s:ViewMenuItem color="#663366"  icon="/assets/rating-64.png" label="Рейтинг" id="rating" click="rating_clickHandler(event)"/> 
+	<!--	<s:ViewMenuItem color="#663366"  icon="/assets/rating-64.png" label="Рейтинг" id="rating" click="rating_clickHandler(event)"/> --> 
 		<s:ViewMenuItem color="#663366"  icon="/assets/news-64.png" label="Новости" id="news" click="news_clickHandler(event)"/> 
 		<s:ViewMenuItem color="#663366"  icon="/assets/user-64.png" label="Аккаунт" id="account" />
 	</s:viewMenuItems> 
