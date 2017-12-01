@@ -9,7 +9,6 @@
 		<![CDATA[
 			import mx.rpc.events.FaultEvent;
 			import mx.rpc.events.ResultEvent;
-
 			
 			import services.people.People;
 			
@@ -28,7 +27,9 @@
 			{
 				navigator.pushView(comfortvilleNewsView);}
 			
-
+			protected function changeUserpic_clickHandler(event:MouseEvent):void
+			{
+				navigator.pushView(comfortvilleUserpicsView);}
 			
 			
 			
@@ -49,6 +50,8 @@
 				trace(event.fault.faultDetail);
 			}
 			
+		
+			
 		]]>
 	</fx:Script>
 	
@@ -64,7 +67,7 @@
 	
 	<s:HGroup width="100%" paddingTop="20" >
 		<s:Group width="90%" >
-			<s:Image   left="40"  source="/assets/icons8-Мим-96.png"/>
+			<s:Image id="changeUserpic" click="changeUserpic_clickHandler(event)"  left="40"  source="/assets/icons8-Мим-96.png"/>
 			<s:VGroup left="160"  verticalCenter="0" >
 				<s:Label text="Рулон Обоев" fontSize="36" color="#663366" />
 				<s:Label text="(Выйти)" fontSize="18" />

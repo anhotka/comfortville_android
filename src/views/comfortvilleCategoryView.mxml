@@ -10,8 +10,7 @@
 	
 	<fx:Script>
 		<![CDATA[
-			import mx.rpc.events.FaultEvent;
-			import mx.rpc.events.ResultEvent;
+			
 			
 			
 		

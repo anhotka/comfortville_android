@@ -40,6 +40,10 @@
 			{
 				navigator.pushView(comfortvilleAccountView);}
 			
+			protected function chooseUserpic_clickHandler(event:MouseEvent):void
+			{
+				navigator.pushView(comfortvilleUserpicsView);}
+			
 			
 			// Placeholder fot loginInput
 			private var loginInput_text:String = "Имя пользователя...";
@@ -175,8 +179,8 @@
 	
 	<s:Group width="100%"  >
 		<s:HGroup width="100%" verticalAlign="middle" horizontalAlign="left" left="35"  bottom="20">
-			<s:Image source="/assets/cat-64.png"/>
-			<s:Label  text="Выберите аватар пользователя"  fontStyle="normal" color="#663366"  fontWeight="bold" fontFamily="PT Sans, sans-serif"/>
+			<s:Image id="chooseUserpic" click="chooseUserpic_clickHandler(event)" source="/assets/cat-64.png"/>
+			<s:Label  text="Выберите изображение"  fontStyle="normal" color="#663366"  fontWeight="bold" fontFamily="PT Sans, sans-serif"/>
 		</s:HGroup>
 	</s:Group>
 	
