@@ -11,8 +11,8 @@
 	 
 	    public class Toast extends BorderContainer
 	    {
-			private var active:Boolean = false;
 			private var ctx:View;
+			private var timer:Timer = new Timer(0,1);
 		         /**
 		          *  CONSTRUCTER
 		          */
@@ -21,9 +21,8 @@
 		        {
 						ctx = context;
 			            super();
-				    this.active = true;
 			            // TIMER TO 'REMOVE' TOAST AFTER THE SPECIFIED 'TIMEOUT'
-			            var timer:Timer = new Timer(timeOut, 1);
+						timer.delay = timeOut;
 			            timer.addEventListener(TimerEvent.TIMER_COMPLETE, function(event:TimerEvent):void
 							{
 				                context.removeElementAt(context.numElements - 1);
@@ -43,8 +42,10 @@
 
 			public function destroyToast():void
 			{
-				if(this.active)
-				ctx.removeElementAt(ctx.numElements - 1);	
+				if(timer.running) {
+					timer.stop();
+					ctx.removeElementAt(ctx.numElements - 1);
+				}
 			}
 
 			public function isActive():Boolean
