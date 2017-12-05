@@ -41,7 +41,8 @@
 					searchInput.text = searchInput_text;
 				}
 			}
-
+			
+			
 			
 			protected function food_clickHandler(event:MouseEvent):void
 			{
@@ -58,15 +59,14 @@
 			protected function account_clickHandler(event:MouseEvent):void
 			{
 				navigator.pushView(comfortvilleAccountView);}
-
-			protected function goToSearchListView_clickHandler(event:MouseEvent):void
+			protected function goToSearchView_clickHandler (event:MouseEvent):void
 			{
-				navigator.pushView(comfortvilleSearchListView);}
+				navigator.pushView(comfortvilleSearchView);}
 			
 			protected function searchInput_enterHandler(event:FlexEvent):void
 			{
 				navigator.pushView(comfortvilleFoundView);}
-			
+
 		]]>
 	</fx:Script>
 
@@ -85,91 +85,35 @@
 	</s:Group>
 	
 	
-	<s:VGroup width="100%" height="100%" >
+	<s:VGroup width="100%" height="100%" paddingLeft="40">
 		<s:Scroller width="100%" height="100%" horizontalCenter="0">
 			<s:VGroup>
 				
+							
 				
-<s:HGroup paddingTop="20" width="100%" horizontalAlign="center" verticalAlign="middle" >
-	<s:Group  >
-		<s:Image id="food" click="food_clickHandler(event)" left="5" bottom="5" right="5" top="5" 
-				 source="/assets/icons8-Ресторан-128.png"/>
-	</s:Group>
-	<s:Group >
-		<s:Image left="5" bottom="5" right="5" top="5"   
-				 source="/assets/icons8-Коктейль-128.png"/>
-	</s:Group>
-	<s:Group  >
-		<s:Image left="5" bottom="5" right="5" top="5"  
-				 source="/assets/icons8-Полная корзина-128.png"/>	
-	</s:Group>
-	<s:Group >
-		<s:Image left="5" bottom="5" right="5" top="5"   
-				 source="/assets/icons8-Больница-128.png"/>	
-	</s:Group>
-</s:HGroup>
-	
-	<s:HGroup  width="100%" horizontalAlign="center" verticalAlign="middle" >
-		<s:Group >
-			<s:Image left="5" bottom="5" right="5" top="5" 
-					 source="/assets/icons8-Губная помада-128.png"/>	
-		</s:Group>
-		<s:Group  >
-			<s:Image left="5" bottom="5" right="5" top="5"   
-					 source="/assets/icons8-Студенческий центр-128.png"/>	
-		</s:Group>
-		<s:Group >
-			<s:Image left="5" bottom="5" right="5" top="5"  
-					 source="/assets/icons8-Литература-128.png"/>	
-		</s:Group>
-		<s:Group>
-			<s:Image left="5" bottom="5" right="5" top="5"  
-					 source="/assets/icons8-Театральные маски-128.png"/>	
-		</s:Group>
-	</s:HGroup>
-	
-	<s:HGroup width="100%" horizontalAlign="center" verticalAlign="middle" >
-		<s:Group >
-			<s:Image left="5" bottom="5" right="5" top="5" 
-					 source="/assets/icons8-Отходы-128.png"/>	
-		</s:Group>
-		<s:Group >
-			<s:Image left="5" bottom="5" right="5" top="5"  
-					 source="/assets/icons8-Посольство-128.png"/>	
-		</s:Group>
-		<s:Group >
-			<s:Image left="5" bottom="5" right="5" top="5" 
-					 source="/assets/icons8-Теннис-128.png"/>	
-		</s:Group>
-		<s:Group >
-			<s:Image left="5" bottom="5" right="5" top="5"  
-					 source="/assets/icons8-Банковские карты-128.png"/>	
-		</s:Group>
-	</s:HGroup>
-	
-	<s:HGroup  width="100%" horizontalAlign="center" verticalAlign="middle" >
-		<s:Group  >
-			<s:Image left="5" bottom="5" right="5" top="5"   
-					 source="/assets/icons8-Почта-128.png"/>	
-		</s:Group>
-		<s:Group >
-			<s:Image left="5" bottom="5" right="5" top="5"  
-					 source="/assets/icons8-Микроавтобус-128.png"/>	
-		</s:Group>
-		<s:Group  >
-			<s:Image left="5" bottom="5" right="5" top="5" 
-					 source="/assets/icons8-Главная-128.png"/>	
-		</s:Group>
-		<s:Group   >
-			<s:Image left="5" bottom="5" right="5" top="5" 
-					 source="/assets/icons8-Натуральная еда-128.png"/>	
-		</s:Group>
-	</s:HGroup>
+				<s:Label text="Еда" id="food" click="food_clickHandler(event)" paddingTop="20" fontStyle="normal" fontSize="36" color="#663366" fontWeight="bold" fontFamily="PT Sans, sans-serif" />
+				<s:Label text="Бары, клубы" fontStyle="normal" fontSize="36" color="#663366" fontWeight="bold" fontFamily="PT Sans, sans-serif"/>
+				<s:Label text="Магазины" fontStyle="normal" fontSize="36" color="#663366" fontWeight="bold" fontFamily="PT Sans, sans-serif" />
+				<s:Label text="Здоровье" fontStyle="normal" fontSize="36" color="#663366" fontWeight="bold" fontFamily="PT Sans, sans-serif" />
+				<s:Label text="Красота" fontStyle="normal" fontSize="36" color="#663366" fontWeight="bold" fontFamily="PT Sans, sans-serif" />
+				<s:Label text="Образование" fontStyle="normal" fontSize="36" color="#663366" fontWeight="bold" fontFamily="PT Sans, sans-serif" />
+				<s:Label text="Библиотеки" fontStyle="normal" fontSize="36" color="#663366" fontWeight="bold" fontFamily="PT Sans, sans-serif" />
+				<s:Label text="Культура" fontStyle="normal" fontSize="36" color="#663366" fontWeight="bold" fontFamily="PT Sans, sans-serif" />
+				<s:Label text="Места сбора мусора" fontStyle="normal" fontSize="36" color="#663366" fontWeight="bold" fontFamily="PT Sans, sans-serif" />
+				<s:Label text="Государственные учреждения" fontStyle="normal" fontSize="36" color="#663366" fontWeight="bold" fontFamily="PT Sans, sans-serif" />
+				<s:Label text="Спорт, отдых" fontStyle="normal" fontSize="36" color="#663366" fontWeight="bold" fontFamily="PT Sans, sans-serif" />
+				<s:Label text="Банки" fontStyle="normal" fontSize="36" color="#663366" fontWeight="bold" fontFamily="PT Sans, sans-serif" />
+				<s:Label text="Услуги связи" fontStyle="normal" fontSize="36" color="#663366" fontWeight="bold" fontFamily="PT Sans, sans-serif" />
+				<s:Label text="Транспорт" fontStyle="normal" fontSize="36" color="#663366" fontWeight="bold" fontFamily="PT Sans, sans-serif" />
+				<s:Label text="Жилые здания" fontStyle="normal" fontSize="36" color="#663366" fontWeight="bold" fontFamily="PT Sans, sans-serif" />
+				<s:Label text="Скверы, парки" fontStyle="normal" fontSize="36" color="#663366" fontWeight="bold" fontFamily="PT Sans, sans-serif" />
+				
+				
 				
 				<s:Group width="100%" horizontalCenter="0">
-					<s:Label id="goToSearchListView" click="goToSearchListView_clickHandler(event)" horizontalCenter="0" 
+					<s:Label id="goToSearchView" click="goToSearchView_clickHandler(event)" horizontalCenter="0" 
 							 textAlign="center" 
-							 text="Посмотреть рубрики в виде списка"
+							 text="Посмотреть рубрики в виде плитки изображений"
 							 textDecoration="underline"
 							 top="20"
 							 width="90%"
@@ -180,8 +124,6 @@
 							 fontFamily="PT Sans, sans-serif"> 
 					</s:Label> 
 				</s:Group>
-				
-				
 				
 			</s:VGroup>
 		</s:Scroller>

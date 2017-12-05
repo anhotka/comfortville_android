@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:View xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		xmlns:s="library://ns.adobe.com/flex/spark" title="comfortvilleNewsView">
+	<s:layout>
+		<s:VerticalLayout/>
+	</s:layout>
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<fx:Script>
+		<![CDATA[
+			
+			protected function search_clickHandler(event:MouseEvent):void
+			{
+				navigator.pushView(comfortvilleSearchView);}			
+			protected function rating_clickHandler(event:MouseEvent):void
+			{
+				navigator.pushView(comfortvilleRatingView);}
+			protected function account_clickHandler(event:MouseEvent):void
+			{
+				navigator.pushView(comfortvilleAccountView);}
+		]]>
+	</fx:Script>
+	
+	<s:Group width="100%">
+		<s:Label horizontalCenter="0" text="Топ-5 самых безопасных входных групп магазинов" top="40" width="90%" fontStyle="normal" color="#663366" fontSize="42" fontWeight="bold" fontFamily="PT Sans, sans-serif"> 
+		</s:Label> 
+	</s:Group>
+	
+	<s:VGroup width="100%" height="100%" paddingLeft="40">
+		<s:Scroller width="100%" height="100%" horizontalCenter="0">
+			<s:VGroup>
+								
+				<s:Label horizontalCenter="0" text="В какие лысьвенские магазины безопаснее заходить? По вашим отзывам мы подготовили список из пяти самых удобных и безопасных входных групп." paddingTop="40" width="80%" fontStyle="normal" fontSize="36" color="#663366" fontWeight="bold" fontFamily="PT Sans, sans-serif"> 
+				</s:Label> 
+				<s:Label horizontalCenter="0" paddingTop="20" text="Повседневная практика показывает, что реализация намеченного плана развития позволяет выполнить важнейшие задания по разработке модели развития! Не следует, однако, забывать о том, что начало повседневной работы по формированию позиции играет важную роль в формировании модели развития!"  width="80%" fontStyle="normal" fontSize="36" color="#663366" fontWeight="normal" fontFamily="PT Sans, sans-serif"> 
+				</s:Label> 
+				<s:Label horizontalCenter="0" text="Таким образом, постоянный количественный рост и сфера нашей активности представляет собой интересный эксперимент проверки позиций, занимаемых участниками в отношении поставленных задач?"  width="80%" fontStyle="normal" fontSize="36" color="#663366" fontWeight="normal" fontFamily="PT Sans, sans-serif"> 
+				</s:Label> 
+				<s:Label horizontalCenter="0" text="С другой стороны, социально-экономическое развитие играет важную роль."  width="80%" fontStyle="normal" fontSize="36" color="#663366" fontWeight="normal" fontFamily="PT Sans, sans-serif"> 
+				</s:Label>
+			
+				
+			</s:VGroup>
+		</s:Scroller>
+	</s:VGroup>  
+	
+	
+	
+	<s:viewMenuItems>
+		<s:ViewMenuItem color="#663366"  icon="/assets/search-64.png" label="Поиск" id="search" click="search_clickHandler(event)"/> 
+	<!--	<s:ViewMenuItem color="#663366"  icon="/assets/rating-64.png" label="Рейтинг" id="rating" click="rating_clickHandler(event)"/> --> 
+		<s:ViewMenuItem color="#663366"  icon="/assets/news-64.png" label="Новости" id="news" /> 
+		<s:ViewMenuItem color="#663366"  icon="/assets/user-64.png" label="Аккаунт" id="account" click="account_clickHandler(event)"/>
+	</s:viewMenuItems> 
+</s:View>
