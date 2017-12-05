@@ -31,6 +31,11 @@
 			{
 				navigator.pushView(comfortvilleUserpicsView);}
 			
+			protected function oldSailor_clickHandler(event:MouseEvent):void
+			{
+				navigator.pushView(comfortvilleObjectView);
+			}
+			
 			
 			
 	/*		protected function getButton_clickHandler(event:MouseEvent):void
@@ -87,7 +92,7 @@
 		<s:Group width="90%" >
 			<s:Label  left="40"  text="4,3" color="#ff9966" fontSize="42"/>
 			<s:VGroup left="160" verticalCenter="0" >
-				<s:Label width="400" text="Старый моряк" fontSize="28" color="#663366" />
+				<s:Label width="400" text="Старый моряк"  id="oldSailor" click="oldSailor_clickHandler(event)"  fontSize="28" color="#663366" />
 				<s:Label text="Бары, клубы" fontSize="18" color="#663366" textDecoration="underline"/>
 			</s:VGroup>
 		</s:Group>

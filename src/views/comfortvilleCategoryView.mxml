@@ -30,6 +30,11 @@
 				navigator.pushView(comfortvilleNewsView);}
 	
 	
+			protected function oldSailor_clickHandler(event:MouseEvent):void
+			{
+				navigator.pushView(comfortvilleObjectView);
+			}
+			
 		]]>
 	</fx:Script>	
 	
@@ -61,7 +66,7 @@
 					<s:Group width="90%" >
 						<s:Label  left="40"  text="4,5" color="#ff9966" fontSize="42"/>
 						<s:VGroup left="160" verticalCenter="0" >
-							<s:Label width="400" text="Старый моряк" fontSize="32" fontWeight="bold" color="#663366" />
+							<s:Label id="oldSailor" click="oldSailor_clickHandler(event)" width="400" text="Старый моряк" fontSize="32" fontWeight="bold" color="#663366" />
 							<s:Label text="Ресторан" fontSize="24" color="#663366"/>
 							<s:Label text="Ленина 48" fontSize="24" color="#663366"/>
 						</s:VGroup>
